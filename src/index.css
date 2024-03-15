@@ -1,0 +1,84 @@
+
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.message-area {
+  width: 80%;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.chat-window {
+  max-height: 200px;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.file {
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: #e6f7ff;
+  border-radius: 5px;
+}
+
+.input-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-input {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.text-input textarea {
+  width: 300px;
+  height: 100px;
+  padding: 8px;
+  margin-right: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.text-input button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.text-input button:hover {
+  background-color: #0056b3;
+}
+
+.file-input input[type="file"] {
+  display: none;
+}
+
+.file-input button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.file-input button:hover {
+  background-color: #0056b3;
+}
