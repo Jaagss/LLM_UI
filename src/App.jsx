@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import './index.css';
+import Header from './Header';
 
 function App() {
   const [messages, setMessages] = useState([]);
@@ -36,36 +37,39 @@ function App() {
   };
 
   return (
-    <div className="chat-container">
-      <div className="message-area">
-        <div className="chat-window">
-          {messages.map((message, index) => (
-            <div key={index} className={message.type === 'text' ? 'message' : 'file'}>
-              {message.type === 'text' ? message.content : <a href={message.content}>Download File</a>}
-            </div>
-          ))}
+    <div className="App">
+      <Header />
+      <div className="chat-container">
+        <div className="message-area">
+          <div className="chat-window">
+            {messages.map((message, index) => (
+              <div key={index} className={message.type === 'text' ? 'message' : 'file'}>
+                {message.type === 'text' ? message.content : <a href={message.content}>Download File</a>}
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-      <div className="input-area">
-        <div className="text-input">
-          <textarea
-            placeholder="Type a message..."
-            value={textInput}
-            onChange={(e) => setTextInput(e.target.value)}
-          />
-          <button onClick={handleMessageSubmit}>Send</button>
-        </div>
-        <div className="file-input">
-          <label htmlFor="file-upload" className="file-upload-label"></label>
-          <button onClick={handleUploadButtonClick}>Upload File</button>
-          <input
-            id="file-upload"
-            type="file"
-            ref={fileInputRef}
-            onChange={handleFileChange}
-            style={{ display: 'none' }}
-          />
-          
+        <div className="input-area">
+          <div className="text-input">
+            <textarea
+              placeholder="Type a message..."
+              value={textInput}
+              onChange={(e) => setTextInput(e.target.value)}
+            />
+            <button onClick={handleMessageSubmit}>Send</button>
+          </div>
+          <div className="file-input">
+            <label htmlFor="file-upload" className="file-upload-label"></label>
+            <button onClick={handleUploadButtonClick}>Upload File</button>
+            <input
+              id="file-upload"
+              type="file"
+              ref={fileInputRef}
+              onChange={handleFileChange}
+              style={{ display: 'none' }}
+            />
+            
+          </div>
         </div>
       </div>
     </div>

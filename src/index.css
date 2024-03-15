@@ -1,4 +1,11 @@
+#root{
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  height: 100vh;
+  background-color: #616060;
 
+}
 
 .chat-container {
   display: flex;
