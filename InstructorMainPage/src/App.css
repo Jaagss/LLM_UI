@@ -1,0 +1,96 @@
+html, body {
+  margin: 0;
+  padding: 0;
+} 
+.header {
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #545454;
+  position: relative;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+}
+
+.dropdown a {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #333;
+}
+
+.assignment-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.assignment-card {
+  width: calc(33% - 2rem);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #565656;
+  text-align: center;
+  transition: background-color 0.2s ease-in-out;
+}
+.assignment-card:hover {  
+  background-color: #eee;
+  .card-number {
+    color: #333;
+  }
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.card-number {
+  color: #aaa;
+}
+
+.add-assignment-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 60px;
+  cursor: pointer;
+}
